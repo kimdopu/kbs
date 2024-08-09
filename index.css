@@ -1,0 +1,298 @@
+/* common */
+
+.inner{
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+.btn{
+    background-color: #4B79EE;
+    border-radius: 8px;
+    padding: 10px 22px;
+    color: #fff;
+}
+/* head */
+@media(min-width:1025px){
+
+#head_layout{
+    /* background-color: crimson; */
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px solid #eee;
+}
+#head_layout .inner{
+    height: 100px;
+    /* background-color: violet; */
+}
+#head_layout .inner .logo{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    height: fit-content;
+}
+#head_layout .inner .mobile-menu,
+#head_layout .inner .mobile-box .mobile-btn .login,
+#head_layout .inner .mobile-box .mobile-btn .close{
+    display: none;
+}
+/* util-menu */
+#head_layout .inner .util-menu{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+#head_layout .inner .util-menu a{
+    color: #222;
+    height: fit-content;
+}
+#head_layout .inner .util-menu a.icon{
+    padding: 12px 5px;
+    color: #222;
+}
+#head_layout .inner.util-menu a.btn{
+    color: #fff;
+
+}
+
+/* main-menu */
+#head_layout .inner .main-menu{
+    display: flex;
+    justify-content: center;
+    /* flex-start 위에서부터 정렬 */
+    align-items: flex-start;
+
+}
+#head_layout .inner .main-menu > li{
+    cursor: pointer;
+}
+#head_layout .inner .main-menu > li:hover .main-menu-name{
+    color: blue;
+}
+#head_layout .inner .main-menu .main-menu-name{
+    font-size: 18px;
+    font-weight: 700;
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+
+}
+#head_layout .inner .main-menu .sub-menu{
+    padding-top: 30px;
+    display: none;
+    position: relative;
+    z-index: 9;
+}
+#head_layout .inner .main-menu .sub-menu a{
+    color: #222;
+    padding: 12px 20px;
+}
+#head_layout .inner .main-menu .sub-menu a:hover{
+    color: blue;
+}
+#head_layout .inner .main-menu:hover .sub-menu
+,#head_layout .inner .main-menu.on .sub-menu{
+    display: block;
+}
+
+#head_layout .inner .menu-bg{
+    /* background-color: crimson; */
+    position: fixed;
+    top: 101px;
+    left: 0;
+    right: 0;
+    z-index: 8;
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0px 2px 2px 0 #8080804f;
+}
+/* hover */
+#head_layout .inner .menu-bg.on{
+    height: 400px;
+}
+#head_layout .inner .menu-bg .mypage-box{
+    position: absolute;
+    right: 20px;
+    margin-top: 40px;
+    z-index: 9;
+    border-left: 2px solid #eee;
+    padding-left: 30px;   
+}
+#head_layout .inner .menu-bg .mypage-box .mypage-title{
+    font-size: 20px;
+}
+#head_layout .inner .menu-bg .mypage-box li > a{
+    padding: 12px 20px 12px 0;
+}
+#head_layout .inner .menu-bg .menu-text{
+    padding: 30px;
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+#head_layout .inner .menu-bg .menu-text em{
+    color: #4B79EE;
+}
+}
+@media(max-width:1025px) and (min-width:1300px){
+    #head_layout .inner{
+        width: 98%;
+        margin: 0 auto;
+    }
+    #head_layout .inner .menu-bg{
+        right: 0;
+        padding-left: 15px;
+    }
+    #head_layout .inner .menu-bg .menu-text{
+        font-size: 20px;
+    }
+}
+@media(max-width:1024px){
+    #head_layout{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+    }
+    #head_layout .inner{
+        height: 70px;
+        /* background-color: #4B79EE; */
+    }
+    #head_layout .inner .logo{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
+    }
+    #head_layout .inner .mobile-menu{
+        padding: 15px;
+        position: absolute;
+        top: 10%;
+        bottom: 0;
+        left: 0;
+        height: fit-content;
+        color: #222;
+    }
+    #head_layout .inner .util-menu .search,
+    #head_layout .inner .util-menu .btn{
+        display: none;
+    }
+    #head_layout .inner .util-menu {
+        /* position: absolute;
+        right: 3%;
+        top: 30%; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        margin-right: 20px;
+    }
+    #head_layout .inner .util-menu > a{
+        width: fit-content;
+        height: fit-content;
+    }
+    #head_layout .inner .mobile-box{
+        /* background-color: #242f78; */
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 11;
+        overflow-y: scroll;
+        padding-top: 7vw;
+        transform: translateX(-100%);
+        transition: 0.4s;
+    }
+    #head_layout .inner .mobile-box.show{
+        transform: translateX(0);
+    }
+    #head_layout .inner .mobile-box .main-menu-name,
+    #head_layout .inner .mobile-box .mypage-title,
+    #head_layout .inner .mobile-box .login{
+        color: #fff;
+        background-color: #34429c;
+        padding: 2vw;
+        font-size: 3vw;
+        font-weight: 700;
+        display: block;
+    }
+    #head_layout .inner .mobile-box .sub-menu li a,
+    #head_layout .inner .mobile-box .mypage li a{
+        background-color: #242f78;
+        color: #fff;
+        padding: 3.5vw 6vw;
+        font-size: 2.5vw;
+        display: block;
+    }
+    #head_layout .inner .mobile-box .mobile-btn{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: fit-content;
+    }
+    #head_layout .inner .mobile-box .close{
+        position: absolute;
+        color: #fff;
+        top: 10px;
+        right: 10px;
+        padding: 12px;
+    }
+    #head_layout .inner .mobile-box .menu-text{
+        display: none;
+    }
+}
+/* 태블릿 */
+@media(min-width:769px) and (max-width:1200px){
+    #head_layout .inner .mobile-box .main-menu-name,
+    #head_layout .inner .mobile-box .mypage-title{
+        font-size: 18px;
+        }
+    #head_layout .inner .mobile-box{
+        padding-top: 7vw;
+    }
+    #head_layout .inner .mobile-box .sub-menu li a,
+    #head_layout .inner .mobile-box .mypage li a{
+        font-size: 18px;
+        padding: 20px 40px;
+    }
+}
+/* 삼성노트, 아이폰맥스 */
+@media(max-width:480px){
+    #head_layout .inner .mobile-box .main-menu-name,
+    #head_layout .inner .mobile-box .mypage-title{
+        padding: 4.5vw 4vw;
+        font-size: 5w;
+        }
+        #head_layout .inner .mobile-box{
+            padding-top: 7vw;
+        }
+    #head_layout .inner .mobile-box .sub-menu li a,
+    #head_layout .inner .mobile-box .mypage li a{
+        padding: 4.5vw 7vw;
+        font-size: 4.5vw;
+    }
+    }
